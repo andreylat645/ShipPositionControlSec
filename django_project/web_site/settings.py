@@ -27,6 +27,8 @@ SECRET_KEY = '@0++=sstr8ox6fpu3nwp!75_141(8s&n9r2s86&5u298$h9%y)'
 DEBUG = True
 #DEBUG = int(os.environ.get("DEBUG", default=0))
 
+AUTH_USER_MODEL = 'control.User'
+
 ALLOWED_HOSTS = ['*']
 #ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
@@ -40,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'control',
 ]
 
 MIDDLEWARE = [
