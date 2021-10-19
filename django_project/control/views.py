@@ -9,7 +9,7 @@ from .serializers import UserSerializer, CruiserSerializer, HistorySerializer
 class UserModelViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     queryset = User.objects.all()
-
+    username = None
 
 class CruiserModelViewSet(viewsets.ModelViewSet):
     serializer_class = CruiserSerializer

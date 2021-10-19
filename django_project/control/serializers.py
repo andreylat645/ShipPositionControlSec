@@ -5,13 +5,15 @@ from .models import User, Cruiser, History
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ("roleId", "login", "displayName")
+        fields = ("roleId", "first_name", "last_name", "username")
 
 
 class CruiserSerializer(serializers.ModelSerializer):
+    #owner = serializers.SlugRelatedField(slug_field="username", read_only=True, many=True)
+
     class Meta:
         model = Cruiser
-        fields = ("created", "title", "owner")
+        fields = ("created", "code", "title", "owner")
 
 
 class HistorySerializer(serializers.ModelSerializer):
