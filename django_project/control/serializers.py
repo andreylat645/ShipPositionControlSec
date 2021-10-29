@@ -19,6 +19,6 @@ class CruiserSerializer(serializers.ModelSerializer):
 class HistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = History
-        fields = ("created", "createdLocation", "longitude", "latitude", "cruiser")
+        fields = ("code", "date", "time", "latitude", "longitude", "cruiser")
 
 

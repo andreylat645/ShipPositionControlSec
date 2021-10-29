@@ -1,0 +1,19 @@
+{% extends 'layout/basic.html' %}
+
+{% block content %}
+<h1>{{title}}</h1>
+<ul>
+    {% for h in histories %}
+    <li>
+        <h2> {{ h.cruiser }} </h2>
+        <p> {{ h.date }} </p>
+        <p> {{ h.time }} </p>
+        {% autoescape on %}
+        {{p.content|linebreaks|truncatewords:50}}
+        {% endautoescape %}
+			<div class="clear"></div>
+			<p class="link-read-post"><a href="#">Информация о перемещении</a></p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
